@@ -15,6 +15,7 @@ Group: System/Libraries
 URL: http://libcddb.sourceforge.net/
 Source: http://prdownloads.sourceforge.net/libcddb/%name-%version.tar.bz2
 Source1: http://prdownloads.sourceforge.net/libcddb/%name-doc-%docver.tar.bz2
+BuildRoot: %_tmppath/%name-buildroot
 Summary: CDDB access library
 BuildRequires: libcdio-devel
 #auto* deps
