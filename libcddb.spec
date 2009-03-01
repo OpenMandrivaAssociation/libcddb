@@ -1,5 +1,5 @@
 %define name libcddb
-%define version 1.3.0
+%define version 1.3.1
 %define rel 1
 %define release %mkrel %rel
 %define docver 1.3.0
@@ -10,7 +10,7 @@
 Name: %name
 Version: %version
 Release: %release
-License: LGPL
+License: LGPLv2+
 Group: System/Libraries
 URL: http://libcddb.sourceforge.net/
 Source: http://prdownloads.sourceforge.net/libcddb/%name-%version.tar.bz2
@@ -79,9 +79,6 @@ This package contains a command line client based on %name.
 rm -rf $RPM_BUILD_ROOT
 %setup -q -a 1
 mv output html
-#gw fix libtool problem
-aclocal-1.8
-autoconf
 
 %build
 %configure2_5x
