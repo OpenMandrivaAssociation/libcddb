@@ -1,5 +1,5 @@
 %define name libcddb
-%define version 1.3.1
+%define version 1.3.2
 %define rel 1
 %define release %mkrel %rel
 %define docver 1.3.0
