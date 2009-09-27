@@ -1,6 +1,6 @@
 %define name libcddb
 %define version 1.3.2
-%define rel 2
+%define rel 3
 %define release %mkrel %rel
 %define docver 1.3.0
 
@@ -8,6 +8,9 @@
 %define libname %mklibname cddb %{major}
 %define develname %mklibname cddb -d
 %define staticdevelname %mklibname cddb -d -s
+
+%define bootstrap 0
+%{?_with_bootstrap: %global bootstrap 1}
 
 Name: %name
 Version: %version
@@ -19,7 +22,9 @@ Source: http://prdownloads.sourceforge.net/libcddb/%name-%version.tar.bz2
 Source1: http://prdownloads.sourceforge.net/libcddb/%name-doc-%docver.tar.bz2
 BuildRoot: %_tmppath/%name-buildroot
 Summary: CDDB access library
+%if !%{bootstrap}
 BuildRequires: libcdio-devel
+%endif
 #auto* deps
 #BuildRequires: gettext-devel
 #BuildRequires: automake1.8
