@@ -3,8 +3,7 @@
 %define libname	%mklibname cddb %{major}
 %define devname	%mklibname cddb -d
 
-%define bootstrap 0
-%{?_with_bootstrap: %global bootstrap 1}
+%bcond_without	bootstrap
 
 Summary:	CDDB access library
 Name:		libcddb
@@ -15,7 +14,7 @@ Group:		System/Libraries
 Url:		http://libcddb.sourceforge.net/
 Source0:	http://prdownloads.sourceforge.net/libcddb/%{name}-%{version}.tar.bz2
 Source1:	http://prdownloads.sourceforge.net/libcddb/%{name}-doc-%{docver}.tar.bz2
-%if !%{bootstrap}
+%if !%{with bootstrap}
 BuildRequires:	pkgconfig(libcdio)
 %endif
 
