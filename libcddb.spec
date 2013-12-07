@@ -8,7 +8,7 @@
 Summary:	CDDB access library
 Name:		libcddb
 Version:	1.3.2
-Release:	10
+Release:	11
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		http://libcddb.sourceforge.net/
