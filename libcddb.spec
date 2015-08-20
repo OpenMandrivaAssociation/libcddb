@@ -2,6 +2,7 @@
 %define major	2
 %define libname	%mklibname cddb %{major}
 %define devname	%mklibname cddb -d
+%define _disable_rebuild_configure 1
 
 %bcond_with	bootstrap
 
