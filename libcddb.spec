@@ -10,12 +10,13 @@
 Summary:	CDDB access library
 Name:		libcddb
 Version:	1.3.2
-Release:	21
+Release:	22
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		http://libcddb.sourceforge.net/
 Source0:	http://prdownloads.sourceforge.net/libcddb/%{name}-%{version}.tar.bz2
 Source1:	http://prdownloads.sourceforge.net/libcddb/%{name}-doc-%{docver}.tar.bz2
+Patch1:		libcddb-gnub.org.patch
 %if !%{with bootstrap}
 BuildRequires:	pkgconfig(libcdio)
 %endif
@@ -57,10 +58,14 @@ to incorporate libcddb into applications.
 
 %prep
 %setup -q -a 1
+%autopatch -p1
+# fix some typo includes
+sed -i 's/CDDB_LOH_/CDDB_LOG_/' include/cddb/cddb_log*.h
+
 mv output html
 
 %build
-%configure2_5x \
+%configure \
 	--disable-static
 %make
 
