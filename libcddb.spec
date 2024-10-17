@@ -13,7 +13,7 @@ Version:	1.3.2
 Release:	23
 License:	LGPLv2+
 Group:		System/Libraries
-Url:		http://libcddb.sourceforge.net/
+Url:		https://libcddb.sourceforge.net/
 Source0:	http://prdownloads.sourceforge.net/libcddb/%{name}-%{version}.tar.bz2
 Source1:	http://prdownloads.sourceforge.net/libcddb/%{name}-doc-%{docver}.tar.bz2
 Patch1:		libcddb-gnub.org.patch
