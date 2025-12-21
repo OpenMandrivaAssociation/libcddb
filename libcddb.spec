@@ -18,6 +18,11 @@ Source0:	http://prdownloads.sourceforge.net/libcddb/%{name}-%{version}.tar.bz2
 Source1:	http://prdownloads.sourceforge.net/libcddb/%{name}-doc-%{docver}.tar.bz2
 Patch1:		libcddb-gnub.org.patch
 %if !%{with bootstrap}
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(libcdio)
 %endif
 
