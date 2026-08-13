@@ -17,6 +17,7 @@ Url:		https://libcddb.sourceforge.net/
 Source0:	http://prdownloads.sourceforge.net/libcddb/%{name}-%{version}.tar.bz2
 Source1:	http://prdownloads.sourceforge.net/libcddb/%{name}-doc-%{docver}.tar.bz2
 Patch1:		libcddb-gnub.org.patch
+Patch2:		libcddb-socklen.patch
 %if !%{with bootstrap}
 BuildRequires:	autoconf
 BuildRequires:	automake
